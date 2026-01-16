@@ -4,8 +4,8 @@
 #ifndef WORLD_H
 #define WORLD_H
 
-#include "types.h"
-#include "material.h"
+#include "core/types.h"
+#include "materials/material.h"
 
 /* =============================================================================
  * World State Structure (SoA layout for performance)

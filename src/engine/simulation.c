@@ -1,7 +1,8 @@
 /*
  * simulation.c - Fixed timestep simulation loop implementation
  */
-#include "simulation.h"
+#include "engine/simulation.h"
+#include "core/utils.h"
 #include <stdlib.h>
 #include <time.h>
 #include <sys/time.h>
@@ -20,16 +21,6 @@ void acid_update(Simulation* sim, World* world);
 void fire_update(Simulation* sim, World* world);
 void gas_update(Simulation* sim, World* world);
 void thermal_update(Simulation* sim, World* world);
-
-/* XORShift RNG */
-static uint32_t xorshift32(uint32_t* state) {
-    uint32_t x = *state;
-    x ^= x << 13;
-    x ^= x >> 17;
-    x ^= x << 5;
-    *state = x;
-    return x;
-}
 
 Simulation* simulation_create(double tick_hz) {
     Simulation* sim = calloc(1, sizeof(Simulation));

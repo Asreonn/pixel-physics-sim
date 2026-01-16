@@ -1,9 +1,9 @@
 /*
  * render.c - SDL2-based rendering implementation
  */
-#include "render.h"
-#include "material.h"
-#include "fire.h"
+#include "engine/render.h"
+#include "materials/material.h"
+#include "subsystems/fire.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -114,10 +114,21 @@ void render_destroy(Renderer* renderer) {
  * ============================================================================= */
 
 void render_begin_frame(Renderer* renderer) {
-    /* Clear pixel buffer to black */
+    /* Clear pixel buffer to opaque black using memset
+     * Note: 0xFF000000 in ARGB is fully opaque black, but memset(0) gives
+     * transparent black. We use a fast fill pattern instead. */
     size_t pixel_count = (size_t)renderer->width * renderer->height;
-    for (size_t i = 0; i < pixel_count; i++) {
-        renderer->pixels[i] = 0xFF000000;  /* Opaque black */
+    /* Fill with opaque black (0xFF000000) - ARGB format */
+    uint32_t* pixels = renderer->pixels;
+    for (size_t i = 0; i < pixel_count; i += 4) {
+        pixels[i] = 0xFF000000;
+        pixels[i + 1] = 0xFF000000;
+        pixels[i + 2] = 0xFF000000;
+        pixels[i + 3] = 0xFF000000;
+    }
+    /* Handle remaining pixels */
+    for (size_t i = (pixel_count / 4) * 4; i < pixel_count; i++) {
+        pixels[i] = 0xFF000000;
     }
 }
 

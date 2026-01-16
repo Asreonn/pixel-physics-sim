@@ -4,10 +4,10 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-#include "types.h"
-#include "world.h"
-#include "simulation.h"
-#include "render.h"
+#include "core/types.h"
+#include "world/world.h"
+#include "engine/simulation.h"
+#include "engine/render.h"
 #include <SDL2/SDL.h>
 
 /* =============================================================================

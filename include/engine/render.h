@@ -4,8 +4,8 @@
 #ifndef RENDER_H
 #define RENDER_H
 
-#include "types.h"
-#include "world.h"
+#include "core/types.h"
+#include "world/world.h"
 #include <SDL2/SDL.h>
 
 /* =============================================================================

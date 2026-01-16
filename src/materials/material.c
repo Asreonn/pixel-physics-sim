@@ -1,7 +1,8 @@
 /*
  * material.c - Data-driven material system implementation
  */
-#include "material.h"
+#include "materials/material.h"
+#include "core/utils.h"
 #include <string.h>
 
 /* =============================================================================
@@ -20,14 +21,6 @@ static bool g_material_is_fluid_lut[MAT_COUNT];
 static bool g_material_is_solid_lut[MAT_COUNT];
 static bool g_material_is_empty_lut[MAT_COUNT];
 static bool g_material_is_gas_lut[MAT_COUNT];
-
-/* Simple hash for color variation */
-static uint32_t hash32(uint32_t x) {
-    x = ((x >> 16) ^ x) * 0x45d9f3b;
-    x = ((x >> 16) ^ x) * 0x45d9f3b;
-    x = (x >> 16) ^ x;
-    return x;
-}
 
 static void material_finalize_fixed(MaterialProps* mat) {
     mat->gravity_step_fixed = FIXED_FROM_FLOAT(GRAVITY_ACCEL * mat->gravity_scale);

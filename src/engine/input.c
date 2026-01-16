@@ -1,8 +1,8 @@
 /*
  * input.c - Input handling implementation
  */
-#include "input.h"
-#include "material.h"
+#include "engine/input.h"
+#include "materials/material.h"
 #include <stdlib.h>
 #include <stdio.h>
 

@@ -4,9 +4,9 @@
 #ifndef POWDER_H
 #define POWDER_H
 
-#include "types.h"
-#include "world.h"
-#include "simulation.h"
+#include "core/types.h"
+#include "world/world.h"
+#include "engine/simulation.h"
 
 /* =============================================================================
  * Powder Update System

@@ -4,9 +4,9 @@
 #ifndef FIRE_H
 #define FIRE_H
 
-#include "types.h"
-#include "world.h"
-#include "simulation.h"
+#include "core/types.h"
+#include "world/world.h"
+#include "engine/simulation.h"
 
 /* =============================================================================
  * Fire and Gas Update System

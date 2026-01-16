@@ -7,12 +7,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "types.h"
-#include "material.h"
-#include "world.h"
-#include "simulation.h"
-#include "render.h"
-#include "input.h"
+#include "core/types.h"
+#include "materials/material.h"
+#include "world/world.h"
+#include "engine/simulation.h"
+#include "engine/render.h"
+#include "engine/input.h"
 
 /* =============================================================================
  * Main Entry Point

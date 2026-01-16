@@ -4,8 +4,8 @@
 #ifndef SIMULATION_H
 #define SIMULATION_H
 
-#include "types.h"
-#include "world.h"
+#include "core/types.h"
+#include "world/world.h"
 
 /* =============================================================================
  * Simulation State

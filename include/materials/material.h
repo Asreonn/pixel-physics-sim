@@ -4,7 +4,7 @@
 #ifndef MATERIAL_H
 #define MATERIAL_H
 
-#include "types.h"
+#include "core/types.h"
 
 /* =============================================================================
  * Material Properties Structure (data-driven)

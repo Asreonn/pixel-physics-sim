@@ -4,9 +4,9 @@
 #ifndef FLUID_H
 #define FLUID_H
 
-#include "types.h"
-#include "world.h"
-#include "simulation.h"
+#include "core/types.h"
+#include "world/world.h"
+#include "engine/simulation.h"
 
 /* =============================================================================
  * Fluid Update System

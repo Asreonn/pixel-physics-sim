@@ -1,20 +1,11 @@
 /*
  * world.c - Grid/World model implementation
  */
-#include "world.h"
+#include "world/world.h"
+#include "core/utils.h"
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-
-/* Simple RNG for color seeds */
-static uint32_t xorshift32(uint32_t* state) {
-    uint32_t x = *state;
-    x ^= x << 13;
-    x ^= x >> 17;
-    x ^= x << 5;
-    *state = x;
-    return x;
-}
 
 World* world_create(int width, int height) {
     World* world = calloc(1, sizeof(World));
