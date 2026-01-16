@@ -1,0 +1,9 @@
+# Build artifacts
+build/
+pixelsim
+*.o
+
+# Editor files
+*.swp
+*.swo
+.DS_Store
