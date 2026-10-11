@@ -1,5 +1,7 @@
 # Pixel-Cell Physics Simulator
 
+> **Status:** Archived. Finished in 2026 (C, SDL2). Successor: PixelSim2 (OpenGL), see [pixelsim2-opengl](https://github.com/Asreonn/pixelsim2-opengl).
+
 A real-time 2D pixel sandbox in C/SDL2. Each cell is a single pixel with its own material, temperature, and state. The simulation uses a fixed timestep and data-driven material rules to model powder, fluid, gas, heat, and reactions with stable performance.
 
 ## Highlights
